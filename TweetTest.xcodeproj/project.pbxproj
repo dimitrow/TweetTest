@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16245EA519EC775C00475E33 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16245EA419EC775C00475E33 /* Accounts.framework */; };
+		16245EA719EC776400475E33 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16245EA619EC776400475E33 /* Twitter.framework */; };
+		16245EA919EC776B00475E33 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16245EA819EC776B00475E33 /* Social.framework */; };
 		16D5574819EC297C008ADA76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D5574719EC297C008ADA76 /* main.m */; };
 		16D5574B19EC297C008ADA76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D5574A19EC297C008ADA76 /* AppDelegate.m */; };
 		16D5574E19EC297C008ADA76 /* TweetTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 16D5574C19EC297C008ADA76 /* TweetTest.xcdatamodeld */; };
@@ -29,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16245EA419EC775C00475E33 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		16245EA619EC776400475E33 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		16245EA819EC776B00475E33 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		16D5574219EC297C008ADA76 /* TweetTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TweetTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16D5574619EC297C008ADA76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16D5574719EC297C008ADA76 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -52,6 +58,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16245EA919EC776B00475E33 /* Social.framework in Frameworks */,
+				16245EA719EC776400475E33 /* Twitter.framework in Frameworks */,
+				16245EA519EC775C00475E33 /* Accounts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +77,9 @@
 		16D5573919EC297C008ADA76 = {
 			isa = PBXGroup;
 			children = (
+				16245EA819EC776B00475E33 /* Social.framework */,
+				16245EA619EC776400475E33 /* Twitter.framework */,
+				16245EA419EC775C00475E33 /* Accounts.framework */,
 				16D5574419EC297C008ADA76 /* TweetTest */,
 				16D5576419EC297C008ADA76 /* TweetTestTests */,
 				16D5574319EC297C008ADA76 /* Products */,
@@ -422,6 +434,7 @@
 				16D5576D19EC297C008ADA76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		16D5576E19EC297C008ADA76 /* Build configuration list for PBXNativeTarget "TweetTestTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +443,7 @@
 				16D5577019EC297C008ADA76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

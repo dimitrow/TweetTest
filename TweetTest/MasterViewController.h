@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import <Social/Social.h>
+#import <Twitter/Twitter.h>
+#import <Accounts/Accounts.h>
+
 
 @interface MasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 

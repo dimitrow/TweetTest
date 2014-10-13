@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Eugene Dimitrow. All rights reserved.
 //
 
+#define kAccessToken = @"AAAAAAAAAAAAAAAAAAAAADiJRQAAAAAAt%2Brjl%2Bqmz0rcy%2BBbuXBBsrUHGEg%3Dq0EK2aWqQMb15gCZNwZo9yqae0hpe2FDsS92WAu0g";
+
 #import "MasterViewController.h"
 #import "DetailViewController.h"
 
@@ -22,15 +24,56 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+    
+    
+    
+    //self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    //UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+    
+    UIBarButtonItem *findButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(getTweets)];
+    
+    self.navigationItem.rightBarButtonItem = findButton;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)getTweets
+{
+    
+    NSString *accessToken = @"AAAAAAAAAAAAAAAAAAAAADiJRQAAAAAAt%2Brjl%2Bqmz0rcy%2BBbuXBBsrUHGEg%3Dq0EK2aWqQMb15gCZNwZo9yqae0hpe2FDsS92WAu0g";
+    NSURLResponse *response;
+    NSError *error;
+    NSString *appToken = [NSString stringWithFormat:@"Bearer %@", accessToken];
+    
+    //NSString *url = @"https://api.twitter.com/1.1/statuses/user_timeline.json?count=2&screen_name=username";
+    
+    NSString *url = @"https://api.twitter.com/1.1/search/tweets.json?q=%23crownvictoria&count=2";
+    
+    NSMutableURLRequest  *tweetsRequest = [[NSMutableURLRequest alloc] init];
+    [tweetsRequest setURL:[NSURL URLWithString:url]];
+    [tweetsRequest setValue:appToken forHTTPHeaderField:@"Authorization"];
+    [tweetsRequest setHTTPMethod:@"GET"];
+    
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:tweetsRequest returningResponse:&response error:&error];
+    if ([responseData length] >0 && error == nil)
+    {
+        NSArray *array = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:&error];
+        
+        
+        NSLog(@"data string %@",array);
+    }
+    else if ([responseData length] == 0 && error == nil)
+    {
+        NSLog(@"No tweets");
+    }
+    else if (error != nil)
+    {
+        NSLog(@"Error happened = %@", error);
+    }
+    
 }
 
 - (void)insertNewObject:(id)sender {
