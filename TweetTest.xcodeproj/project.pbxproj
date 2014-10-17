@@ -10,9 +10,9 @@
 		16245EA519EC775C00475E33 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16245EA419EC775C00475E33 /* Accounts.framework */; };
 		16245EA719EC776400475E33 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16245EA619EC776400475E33 /* Twitter.framework */; };
 		16245EA919EC776B00475E33 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16245EA819EC776B00475E33 /* Social.framework */; };
+		1624933B19F02D77002076F9 /* TweetTestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1624933919F02D77002076F9 /* TweetTestModel.xcdatamodeld */; };
 		16D5574819EC297C008ADA76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D5574719EC297C008ADA76 /* main.m */; };
 		16D5574B19EC297C008ADA76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D5574A19EC297C008ADA76 /* AppDelegate.m */; };
-		16D5574E19EC297C008ADA76 /* TweetTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 16D5574C19EC297C008ADA76 /* TweetTest.xcdatamodeld */; };
 		16D5575119EC297C008ADA76 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D5575019EC297C008ADA76 /* MasterViewController.m */; };
 		16D5575419EC297C008ADA76 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D5575319EC297C008ADA76 /* DetailViewController.m */; };
 		16D5575719EC297C008ADA76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16D5575519EC297C008ADA76 /* Main.storyboard */; };
@@ -35,12 +35,12 @@
 		16245EA419EC775C00475E33 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		16245EA619EC776400475E33 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		16245EA819EC776B00475E33 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		1624933A19F02D77002076F9 /* TweetTestModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TweetTestModel.xcdatamodel; sourceTree = "<group>"; };
 		16D5574219EC297C008ADA76 /* TweetTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TweetTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16D5574619EC297C008ADA76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16D5574719EC297C008ADA76 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		16D5574919EC297C008ADA76 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		16D5574A19EC297C008ADA76 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		16D5574D19EC297C008ADA76 /* TweetTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TweetTest.xcdatamodel; sourceTree = "<group>"; };
 		16D5574F19EC297C008ADA76 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		16D5575019EC297C008ADA76 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		16D5575219EC297C008ADA76 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 				16D5575519EC297C008ADA76 /* Main.storyboard */,
 				16D5575819EC297C008ADA76 /* Images.xcassets */,
 				16D5575A19EC297C008ADA76 /* LaunchScreen.xib */,
-				16D5574C19EC297C008ADA76 /* TweetTest.xcdatamodeld */,
+				1624933919F02D77002076F9 /* TweetTestModel.xcdatamodeld */,
 				16D5574519EC297C008ADA76 /* Supporting Files */,
 			);
 			path = TweetTest;
@@ -243,7 +243,7 @@
 				16D5575119EC297C008ADA76 /* MasterViewController.m in Sources */,
 				16D5574B19EC297C008ADA76 /* AppDelegate.m in Sources */,
 				16D5574819EC297C008ADA76 /* main.m in Sources */,
-				16D5574E19EC297C008ADA76 /* TweetTest.xcdatamodeld in Sources */,
+				1624933B19F02D77002076F9 /* TweetTestModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,13 +448,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		16D5574C19EC297C008ADA76 /* TweetTest.xcdatamodeld */ = {
+		1624933919F02D77002076F9 /* TweetTestModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				16D5574D19EC297C008ADA76 /* TweetTest.xcdatamodel */,
+				1624933A19F02D77002076F9 /* TweetTestModel.xcdatamodel */,
 			);
-			currentVersion = 16D5574D19EC297C008ADA76 /* TweetTest.xcdatamodel */;
-			path = TweetTest.xcdatamodeld;
+			currentVersion = 1624933A19F02D77002076F9 /* TweetTestModel.xcdatamodel */;
+			path = TweetTestModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
